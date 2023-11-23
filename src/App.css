@@ -1,0 +1,27 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+
+  --red: rgb(255, 71, 93);
+  --green: rgb(25, 234, 171);
+}
+
+body {
+  background: rgb(16, 22, 36);
+  color: rgb(99, 110, 133);
+}
+
+.app {
+
+  > * {
+    margin-bottom: 20px;
+  }
+}
