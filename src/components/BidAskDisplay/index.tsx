@@ -203,7 +203,7 @@ export default function BidAskDisplay({
                   [s.highlight]: i === 0,
                 })}
               >
-                <p>{order[0]}</p>
+                <p>{BigNumber(order[0]).toFixed()}</p>
               </div>
               <div key={sizeKey}>{order[1]}</div>
               <div

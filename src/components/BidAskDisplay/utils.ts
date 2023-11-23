@@ -58,14 +58,14 @@ export function getUpdatedOrders(
     const newOrder = newOrders[i];
     const newOrderIndex = getSortedOrderIndex(orders, newOrder);
 
-    if (newOrder[0] === orders[newOrderIndex]?.[0]) {
-      if (newOrder[1] === '0') {
+    if (BigNumber(newOrder[0]).eq(orders[newOrderIndex]?.[0])) {
+      if (BigNumber(newOrder[1]).eq(0)) {
         orders.splice(newOrderIndex, 1); // remove order if new size is 0
       } else {
         orders.splice(newOrderIndex, 1, newOrder); // replace order
       }
     } else {
-      if (newOrder[1] !== '0') {
+      if (!BigNumber(newOrder[1]).eq(0)) {
         orders.splice(newOrderIndex, 0, newOrder); // insert new non-zero size order at correct index (sorted by price)
       }
     }
