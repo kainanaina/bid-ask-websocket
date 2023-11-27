@@ -5,6 +5,8 @@ npm install
 npm run dev
 ```
 
+[https://bid-ask-websocket.vercel.app/](https://bid-ask-websocket.vercel.app/) - preview
+
 JWT token is hardcoded in utils, I'm using one I got from website after signing with my metamask wallet, it says that my api keys are valid for 90 days, so I haven't bothered with env variables. But in real project there ofc would be a combo of auth for users or some env variables in local dev, the usual stuff.
 
 I really liked this exercise, it made me feel alive for the first time in a long time. Most of the modern frontend is very boring and kinda moving backwards with heavy focus on SSR, even after initial render. So working on a widget with very fast api and updates where you need to care about code effiency was really fun, I'm totally in love.
